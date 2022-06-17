@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:1440px) {
+    body{width: 100%;
+}}
+@media screen and (max-width:375px){
+    body{width: 70%
+}}
+
+
+/* Mobile (375px and down)
+@media only screen and (max-width: 375px){
+    box-sizing:: border-b
+}
+
+Desktops (1440px and up) 
+@media only screen and (min-width: 1440px) */
+
+body {
+    background: #0e0e0e;
+    /*font-size: 15px;
+    height: 100vh;
+    display: block;*/
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+    height: 100vh;
+    /*transition: background-color: 300ms;*/
+    padding: 2cm;
+}
+
+/*div {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+*/
+.SEDANS {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.SUVS {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.LUXURY {
+    background-color: hsl(179, 100%, 13%);
+}
+
+h3 {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 15px;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+button {
+    background-color: hsl(0, 0%, 95%);
+    text-align: center;
+    border: none;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.button-sedans {
+    color: hsl(31, 77%, 52%);
+}
+
+.button-suvs {
+    color: hsl(184, 100%, 22%);
+}
+
+.button-luxury {
+    color: hsl(179, 100%, 13%);
+}
