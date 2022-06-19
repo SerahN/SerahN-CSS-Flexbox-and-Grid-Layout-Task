@@ -13,6 +13,7 @@ main {
     width: 70%;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: hsl(0, 0%, 95%);
@@ -46,11 +47,13 @@ main {
 h3 {
     color: hsl(0, 0%, 95%);
     font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
 }
 
 p {
     color: hsla(0, 0%, 100%, 0.75);
     font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
 }
 
 button {
@@ -63,6 +66,7 @@ button {
     justify-content: center;
     border-radius: 50px;
     font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
 }
 
 .button-sedans {
