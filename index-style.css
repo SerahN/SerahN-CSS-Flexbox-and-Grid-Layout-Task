@@ -1,98 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*Primary colours*/
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very_dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral colours*/
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very_light-gray: hsl(0, 0%, 95%);
 }
 
 body {
-    background-color: #0e0e0e;
-    font-size: 15px;
+  background-color: var(--very_light-gray);
+  min-height: 100vh;
+  font-size: 15px;
+
 }
 
 main {
-    width: 70%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(0, 0%, 95%);
-    height: 100vh;
-    padding: 2cm;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-    
-.main{
-    display: flex;
-    flex-wrap: wrap;   
+
+.main {
+  display: flex;
+  margin: 2rem;
+  overflow: hidden;
+  width: 80%;
+}
+
+div {
+  padding: 50px;
 }
 
 .SEDANS {
-    background-color: hsl(31, 77%, 52%);
-    padding: 1cm;
-    width: 33.33%;
+  flex: 1;
+  background-color: var(--bright-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .SUVS {
-    background-color: hsl(184, 100%, 22%);
-    padding: 1cm;
-    width: 33.33%;
+  flex: 1;
+  background-color: var(--dark-cyan);
 }
 
 .LUXURY {
-    background-color: hsl(179, 100%, 13%);
-    padding: 1cm;
-    width: 33.33%;
+  flex: 1;
+  background-color: var(--very_dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-h3 {
-    color: hsl(0, 0%, 95%);
-    font-family: 'Big Shoulders Display', cursive;
-    font-weight: 700;
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--transparent-white);
+  padding-top: 20px;
 }
 
 p {
-    color: hsla(0, 0%, 100%, 0.75);
-    font-family: 'Lexend Deca', sans-serif;
-    font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: var(--transparent-white);
+  line-height: 1.6;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 button {
-    background-color: hsl(0, 0%, 95%);
+    background-color: var(--very_light-gray);
     text-align: center;
     border: none;
-    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
+    outline: none;
 }
-
 .button-sedans {
-    color: hsl(31, 77%, 52%);
+    color: var(--bright-orange);
 }
-
+.button-sedans:active{
+    background-color: var(--bright-orange);
+    color: var(--very_light-gray);
+    border: solid hsl(0, 0%, 95%);
+}
 .button-suvs {
-    color: hsl(184, 100%, 22%);
+    color: var(--dark-cyan);
 }
-
+.button-suvs:active{
+    background-color: var(--dark-cyan);
+    color: var(--very_light-gray);
+    border: solid hsl(0, 0%, 95%);
+}
 .button-luxury {
-    color: hsl(179, 100%, 13%);
+    color: var(--very_dark-cyan);
 }
-.GridLayoutButton{
-    text-align: center;  
-    border: 1px solid red;
-    background-color: gold;
-    display:block; 
-    margin: auto;
+.button-luxury:active {
+    background-color: var(--very_dark-cyan);
+    color: var(--very_light-gray);
+    border: solid hsl(0, 0%, 95%);
+}
+.GridLayoutButton{ 
+    border: solid red;
     border-radius: 10px;
-    font-size: 24px;
-    padding: 14px 40px;
+}
+/*FOR MOBILE*/
+@media only screen and (max-width: 375px) {
+  .main {
+    flex-direction: column;
   }
-  @media screen and (max-width:1440px) {
-    .main{width: 80%;}}
-@media screen and (max-width:375px){
-    body {
-        background-color:pink}
-    }
+  .SEDANS {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .LUXURY {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+}
